@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Placement Prediction Users</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    </head>
+    <body>
+        <div class="main">
+            <h1 style="font: 40px Arial , sans-serif; font-variant: small-caps;">Application Form</h1>
+        </div>
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <section class="section_A">
+                        <label for="Name">Name : &nbsp;<span class="required">*</span></label>
+                        <input type="text" id="Name" name="Name" placeholder="Enter Full Name" required><br><br>
+                        <label for="email">Email : &nbsp;<span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Enter email" required><br><br>
+                        <label for="mobile">Mobile : &nbsp;<span class="required">*</span></label>
+                        <input type="number" id="mobile" name="mobile" placeholder="Enter Mobile number" required><br><br>
+                        <label for="DOB">DOB : &nbsp;<span class="required">*</span></label>
+                        <input type="date" id="DOB" name="DOB" required><br>
+                        <label for="gender">Gender: &nbsp;<span class="required">*</span></label>
+                        <select name="gender" id="gender" required>
+                            <option value=0>--Select--</option>
+                            <option value=1>male</option>
+                            <option value="female">female</option>
+                        </select>
+                    </section>
+                    <section class="section_A">
+                        <label for="ssc_b">10'th School Name : &nbsp;<span class="required">*</span></label>
+                        <input type="text" id="ssc_b" name="ssc_b" placeholder="Enter School Name" required>
+                        <label for="ssc_y">Passout Year : &nbsp;<span class="required">*</span></label>
+                        <input type="number" id="ssc_y" name="ssc_y" placeholder="Enter Passout Year" required>
+                        <label for="ssc_p">Marks / Gpa : &nbsp;<span class="required">*</span></label>
+                        <input type="number" step="0.01" id="ssc_p" name="ssc_p" placeholder="Enter Marks / GPA in 00.00" required><br>
+                    </section>
+                    <section class="section_A">
+                        <label for="hsc_b">12'th / Diploma School : &nbsp;<span class="required">*</span></label>
+                        <input type="text" id="hsc_b" name="hsc_b" placeholder="Enter 12'th / Diploma School Name" required>
+                        <label for="hsc_y">Passout Year : &nbsp;<span class="required">*</span></label>
+                        <input type="number" id="hsc_y" name="hsc_y" placeholder="Enter Passout Year" required>
+                        <label for="hsc_p">Marks / GPA : &nbsp;<span class="required">*</span></label>
+                        <input type="number" step="0.01" id="hsc_p" name="hsc_p" placeholder="Enter Marks / GPA in 00.00" required><br>
+                    </section>
+                    <section class="section_A">
+                        <label for="degree"> Degree College : &nbsp;<span class="required">*</span></label>
+                        <input type="text" id="degree" name="degree" placeholder="College Name" required>
+                        <label for="university"> Degree University : &nbsp;<span class="required">*</span></label>
+                        <input type="text" id="university" name="university" placeholder="University Name" required>
+                        <label for="Stream"> Stream : &nbsp;<span class="required">*</span></label>
+                        <select name="Stream" id="Stream" required>
+                            <option value="select">--Select--</option>
+                            <option value="BE">BE</option>
+                            <option value="BTech">BTech</option>
+                        </select>
+                        <label for="degree_t"> Branch : &nbsp;<span class="required">*</span></label>
+                        <select id="degree_t" name="degree_t" required>
+                            <option value="select">--Select--</option>
+                            <option value="CS">CS</option>
+                            <option value="IT">IT</option>
+                        </select>
+                        <label for="degree_passoutYear"> Passout Year : &nbsp;<span class="required">*</span></label>
+                        <input type="number" id="degree_passoutYear" name="degree_passoutYear" placeholder="Enter Passout Year" required>
+                        <label for="degree_p"> Degree Marks / GPA : &nbsp;<span class="required">*</span></label>
+                        <input type="number" step="0.01" id="degree_p" name="degree_p" placeholder="Enter Marks / GPA in 00.00" required><br>
+                    </section class="section_A">
+                    <section class="section_A">
+                        <label for="status">Previously Placed or Not-Placed&nbsp;<span class="required">*</span></label>
+                        <select name="status" id="status" name="status" required>
+                            <option value="select">--Select--</option>
+                            <option value="1">placed</option>
+                            <option value="0">Not placed</option>
+                        </select>
+                    </section>
+                    <section class="section_A">
+                        <label for="workex"> Work Experience : &nbsp;<span class="required">*</span></label>
+                        <select id="workex" name="workex" required>
+                            <option value="select">--Select--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <label for="workex_company"> Comapany Name: &nbsp;<span class="required">*</span></label>
+                        <input type="text" id="workex_company" name="workex_company" placeholder="Enter Comapany Name">
+                        <label for="salary"> Current Salary : &nbsp;<span class="required">*</span></label>
+                        <input type="number" id="salary" name="salary" placeholder="Current Salary per Annum" ><br>
+                    </section>
+                    <section class="section_A">
+                        <label for="specialisation" >Specialisation :</label>
+                        <select id="specialisation" name="specialisation" required>
+                            <option value="select">--Select--</option>
+                            <option value="Specialisation1">Specialisation1</option>
+                            <option value="Specialisation2">Specialisation2</option>
+                        </select>
+                    </section>
+                    <section class="section_A">
+                        <label for="skills">Skills :</label>
+                        <input type="text" id="skills" name="skills" placeholder="Enter Skills"><br>
+                    </section>
+                    <section class="section_A">
+                        <label for="certificates">Certificates :</label>
+                        <input type="text" id="certificates" name="certificates" placeholder="Enter Certificates"><br>
+                    </section>
+                    <section class="section_A">
+                        <div id="projectData"></div>
+                        <button type="button" onclick="addProject()">Add Project</button>
+                        <input type="hidden" id="project_count" name="project_count" value="0"><br>
+                    </section>
+                    <section class="section_A">
+                        <label for="resume">Resume :</label>
+                        <input type="file" id="resume" name="resume"><br>
+                    </section>
+                        <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+        <script>
+            let projectCount = 0;
+            function addProject() {
+                projectCount++;
+                const projectDataDiv = document.getElementById('projectData');
+                const projectHtml = `
+                    <div class="project-form" id="project${projectCount}">
+                        <h3>Project ${projectCount}</h3>
+                        <label for="pname${projectCount}">Project Name:</label>
+                        <input type="text" id="pname${projectCount}" name="pname${projectCount}" required>
+                        <label for="pskills${projectCount}">Skills:</label>
+                        <input type="text" id="pskills${projectCount}" name="pskills${projectCount}" required>
+                        <label for="pstartdate${projectCount}">Start Date:</label>
+                        <input type="date" id="pstartdate${projectCount}" name="pstartdate${projectCount}" required>
+                        <label for="penddate${projectCount}">End Date:</label>
+                        <input type="date" id="penddate${projectCount}" name="penddate${projectCount}" required>
+                        <label for="desc${projectCount}">Description:</label>
+                        <textarea id="desc${projectCount}" name="desc${projectCount}" required></textarea>
+                        <button type="button" onclick="removeProject(${projectCount})">Remove</button>
+                        <br><br>
+                    </div>
+                `;
+                projectDataDiv.insertAdjacentHTML('beforeend', projectHtml);
+                document.getElementById('project_count').value = projectCount;
+            }
+            function removeProject(id) {
+                const projectDiv = document.getElementById(`project${id}`);
+                if (projectDiv) {
+                    projectDiv.remove();
+                    // Adjust the project count if needed
+                    projectCount--;
+                    document.getElementById('project_count').value = projectCount;
+                    // Optionally, re-number the remaining projects
+                    renumberProjects();
+                }
+            }
+            function renumberProjects() {
+                const projectForms = document.querySelectorAll('.project-form');
+                projectForms.forEach((form, index) => {
+                    const newId = index + 1;
+                    form.id = `project${newId}`;
+                    form.querySelectorAll('input, textarea').forEach(field => {
+                        const name = field.name.replace(/\d+/, newId);
+                        field.name = name;
+                        field.id = name;
+                    });
+                    form.querySelector('h3').textContent = `Project ${newId}`;
+                });
+                projectCount = projectForms.length;
+                document.getElementById('project_count').value = projectCount;
+            }
+        </script>
+    </body>
+</html>

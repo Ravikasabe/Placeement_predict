@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Careers - MyCompany</title>
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1> MyCompany </h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#Prediction">Predict placement</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="home">
+            <section id="company_details" class="company_details">
+                <div class="container">
+                    <h2>About MyCompany</h2>
+                    <section class="info">
+                        <p>MyCompany is a leading innovator in the tech industry, <br>specializing in cutting-edge solutions that <br>drive growth and efficiency for businesses worldwide. <br>Our mission is to deliver exceptional products and services<br> that exceed expectations and create lasting value.</p>
+                    </section>
+
+                    <section style="margin: 30px; ">
+                        <h2>Enviroment which suites Employee</h2>
+
+                    </section>
+                    <section class="c_images">
+                        <div class="company-images">
+                            <img src="{% static 'company_1.1.jpg'%}" alt="Company Office" class="company-image">
+                            <img src="{% static 'company_1.2.jpg'%}" alt="Team Collaboration" class="company-image">
+                            <img src="{% static 'company_1.3.jpg'%}" alt="Team Collaboration" class="company-image">
+                            <img src="{% static 'company_1.4.jpg'%}" alt="Team Collaboration" class="company-image">
+                    
+                        </div>
+                    </section>
+                    <div class="company-info">
+                        <h3>Our Values</h3>
+                        <ul>
+                            <li>Innovation</li>
+                            <li>Integrity</li>
+                            <li>Customer Satisfaction</li>
+                            <li>Teamwork</li>
+                        </ul>
+                    </div>  
+                </div>
+            </section>
+            <section class="careers" id="careers">
+                <h2>Current Job Openings</h2>
+                <div class="job-listing">
+                    {% for key, i in job_roles.items %}
+                    <div class="job">
+                        <h3> {{i.title}}</h3>
+                        <p><strong> Location: </strong> {{i.location}}</p>
+                        <p><strong>Experience: </strong> {{i.experience}}</p>
+                        <a href="{% url 'result' %}" class="apply-button-link"><button class="apply-button">Apply Now</button></a>
+                        <a target="_blank" class="know_more" href="/jobrole?role=software-engineer">Know More...</a>
+                    </div>
+                    {% endfor %}
+                </div>  
+                <center id="Prediction" style="margin-top: 50px; margin-bottom: 50px;">
+                    <a class="predict-placement-button" href="{% url 'result' %}">Predict Placement</a>
+                </center>
+            </section>       
+        </main>
+        <footer>
+            <div class="container">
+                <section class="about" id="about">
+                    <div class="about-item">
+                        <h2>About Us</h2>
+                        <a href="#company_details" style="text-decoration: none;"><h4>Learn more about our company.</h4></a>
+                    </div>
+                    <div class="about-item">
+                        <h2>Contact Us</h2>
+                        <a href="/send_email/" style="text-decoration: none;"><h4>Get in touch.</h4></a>
+                    </div>
+                </section>
+                <section class="footer-info">
+                    <p>&copy; 2024 Your Company. All rights reserved.</p>
+                    <p>123 Company Address, City, Country</p>
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>

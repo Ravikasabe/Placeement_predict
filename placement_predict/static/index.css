@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('result_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed; 
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 35px; 
+    font-weight: bold; 
+    background: linear-gradient(to right, #ffb300, #ffffffd8); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); 
+    letter-spacing: 2px; 
+    font-family: 'Poppins', sans-serif;
+  
+    
+}
+
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav ul li a:hover{
+    color: #f10d0d;
+    text-decoration: none;
+    
+} 
+
+main {
+    padding: 20px;
+}
+
+.info{
+    background-color: #00000033;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+
+#careers h2{
+   
+    text-align: center;
+    color: #ffffff;
+}
+.careers{
+    padding: 10px;
+    background-color: #00000087;
+    border-radius: 15px;
+}
+
+
+.job-listing {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+}
+
+.job {
+    background-color: #ffffffdc;
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.job h3 {
+    margin-top: 0;
+}
+
+.know_more{
+    padding-left: 100px;
+    text-decoration: none;
+    color: #001aff;
+}
+.know_more:hover{
+    text-decoration: none;
+    color: #ff000097;
+}
+
+.predict-placement-button {
+    margin-top: 20px;
+    background-color: #ffd500bd;
+    text-decoration: none;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.predict-placement-button:hover {
+    background-color: rgba(255, 213, 0, 0.858);
+}
+.apply-button {
+   
+    background-color: #007bffb8;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.apply-button:hover{
+    background-color: #0056b3;
+}
+
+.company_details{
+    display: flex;
+    padding: 10px;
+    background-color: #ffffff9c;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.company_details h2{
+    text-align: center;
+    margin: 50px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent; 
+    background: linear-gradient(to right, #22ff00, #ff6f00cb);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+   
+}
+
+.company_details p {
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px; 
+    margin: 50px;
+    animation: all 0.5s infinite;
+}
+
+.c_images {
+    background-color: #00000047; 
+    padding: 10px;
+}
+
+.company-images {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    justify-content: center; 
+}
+
+.company-image {
+    width: 200px;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all 0.3s ease; 
+}
+
+.company-image:hover {
+    width: 500px;
+    height: 500px; 
+}
+
+
+
+.company-info h3{
+    margin-left: 80px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent; 
+    background: linear-gradient(to right, #22ff00, #ff6f00cb);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+
+}
+.company-info ul{
+    
+    margin-left: 5%;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-background-clip: text; 
+    background-clip: text; 
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.about-item h4{
+    text-decoration: none; 
+    color: white;
+}
+.about-item h4:hover{
+    text-decoration: none; 
+    color: rgb(244, 2, 2);
+}
+
+.about-item h2 {
+    margin-top: 0;
+}
+
+.footer-info {
+    margin-top: 1.5rem;
+}
+
+.footer-info p {
+    margin: 0.5rem 0;
+}
+
+.footer-info p:first-of-type {
+    font-weight: bold;
+}
+

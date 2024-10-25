@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Job Role Details</title>
+        <link rel="stylesheet" href="{% static 'jobrole.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="job-role-details">
+                <h1>{{ job_role.title }}</h1>
+                <p><strong>Location:</strong> {{ job_role.location }}</p>
+                <p><strong>Experience:</strong> {{ job_role.experience }}</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    {% for i in job_role.responsibilities %}
+                        <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+                <p><strong>Salary:</strong> {{ job_role.salary }}</p>
+                <p><strong>Skills Required:</strong></p> 
+                <ul>
+                    {% for i in job_role.skills %}
+                        <li>{{ i }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'result' %}" class="apply-button-link">Apply Now</a><br><br>
+                <a class="back" href="/index/">Back to Job Listings</a>
+            </div>
+        </div>
+    </body>
+</html>

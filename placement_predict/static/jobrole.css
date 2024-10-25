@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: -webkit-linear-gradient(right, #17b9e29d, #048cf488, #17a5f846, #2218e774);
+
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.job-role-details {
+    background: #fefdfd6a;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #333;
+}
+.apply-button-link{
+    margin-left: 45%;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    background-color: rgba(255, 166, 0, 0.848);
+}
+.apply-button-link:hover{
+    background-color: rgba(64, 255, 0, 0.921);
+    color: black;
+    transition: all 0.6s ;
+}
+.back{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+.back:hover{
+    text-decoration: none;
+    color: white;
+}

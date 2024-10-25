@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Prediction Results</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <h1>Placement Prediction</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/index/">Home</a></li>
+                        <li><a href='/result/'>Prediction Form</a></li>
+                        <li><a href="#footer" >Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="result-container">
+                <h2>Prediction Result</h2>
+                <p ><strong>Name:</strong><span style="color: brown;"> {{ name }} </span> </p>
+                <h3 >
+                    <strong>Predicted Result : </strong >{% if ans == "10% chance of placement" %}<span style="color: red;">{{ ans }}</span>{% elif ans == "80% chance of placement" %}<span style="color: rgb(0, 76, 255);">{{ ans }} </span>{% endif %}
+                </h3>
+            </div>
+            <div class="result-container">
+                {% if ans == "80% chance of placement" %}
+                    <section class="placement-info">
+                        <h2>Tips to get Placed</h2>
+                        <ul>
+                            <li>Enhance your resume with relevant skills and experiences.</li>
+                            <li>Prepare thoroughly for interviews by practicing common questions and answers.</li>
+                            <li>Build a strong network by connecting with professionals in your field.</li>
+                            <li>Gain practical experience through internships and projects.</li>
+                            <li>Stay updated with industry trends and advancements.</li>
+                            <li>Participate in workshops and training sessions to enhance your qualifications.</li>
+                        </ul>
+                    </section>
+                {% elif ans == "10% chance of placement" %}
+                    <section class="placement-info">
+                        <h2>Suggestions to Improve Your Chances</h2>
+                        <ul>
+                            <li>Evaluate and enhance your skills based on job market requirements.</li>
+                            <li>Consider additional training or certifications to boost your qualifications.</li>
+                            <li>Revise and improve your resume to highlight your strengths.</li>
+                            <li>Work on building a strong portfolio of projects and achievements.</li>
+                            <li>Practice interview skills and develop confidence in your responses.</li>
+                            <li>Network with professionals and attend industry events.</li>
+                            <li>Seek guidance from career counselors or mentors to strategize your job search.</li>
+                        </ul>
+                    </section>
+                {% else %}
+                    <section class="placement-info">
+                        <h3>Additional Advice</h3>
+                
+                        <ul>
+                            <li>Continuously work on developing both soft and hard skills.</li>
+                            <li>Stay persistent and proactive in your job search efforts.</li>
+                            <li>Regularly update your resume and LinkedIn profile.</li>
+                            <li>Explore different job opportunities and industries.</li>
+                            <li>Consider seeking professional advice or career coaching.</li>
+                        </ul>
+                    </section>
+                {% endif %} 
+            </div>
+            <div class="result-container">
+                <h2>How the Prediction is Done</h2>
+                <ul>
+                    <li><strong>Data Collection:</strong> We collect relevant data such as gender, academic scores, and work experience.</li>
+                    <li><strong>Data Preprocessing:</strong> The data is cleaned and transformed to be suitable for modeling, including handling missing values and encoding categorical variables.</li>
+                    <li><strong>Feature Selection:</strong> We select important features that contribute to the prediction.</li>
+                    <li><strong>Model Training:</strong> We train a machine learning model (e.g., SVM) using historical data to learn patterns and make predictions.</li>
+                    <li><strong>Prediction:</strong> The trained model predicts the placement probability based on the input data.</li>
+                    <li><strong>Evaluation:</strong> We evaluate the model's performance using metrics such as accuracy and confusion matrix to ensure its reliability.</li>
+                </ul>
+            </div>  
+        </main>
+        <footer>
+            <div id="footer" class="footer-content">
+                <p>&copy; 2024 Placement Prediction System. All rights reserved.</p>
+                <p>Address: 1, Main Street, Pune, India</p>
+                <p>Email: <a href="mailto:support@placementprediction.com">support@placementprediction.com</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
